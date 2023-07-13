@@ -1,0 +1,15 @@
+C:\Users\Sergey\Desktop\Северсталь\Severstal\bin\Debug\Severstal.exe.config
+C:\Users\Sergey\Desktop\Северсталь\Severstal\bin\Debug\Severstal.exe
+C:\Users\Sergey\Desktop\Северсталь\Severstal\bin\Debug\Severstal.pdb
+C:\Users\Sergey\Desktop\Северсталь\Severstal\obj\Debug\Severstal.csproj.AssemblyReference.cache
+C:\Users\Sergey\Desktop\Северсталь\Severstal\obj\Debug\MainWindow.g.cs
+C:\Users\Sergey\Desktop\Северсталь\Severstal\obj\Debug\App.g.cs
+C:\Users\Sergey\Desktop\Северсталь\Severstal\obj\Debug\Severstal_MarkupCompile.cache
+C:\Users\Sergey\Desktop\Северсталь\Severstal\obj\Debug\Severstal_MarkupCompile.lref
+C:\Users\Sergey\Desktop\Северсталь\Severstal\obj\Debug\MainWindow.baml
+C:\Users\Sergey\Desktop\Северсталь\Severstal\obj\Debug\Severstal.g.resources
+C:\Users\Sergey\Desktop\Северсталь\Severstal\obj\Debug\Severstal.Properties.Resources.resources
+C:\Users\Sergey\Desktop\Северсталь\Severstal\obj\Debug\Severstal.csproj.GenerateResource.cache
+C:\Users\Sergey\Desktop\Северсталь\Severstal\obj\Debug\Severstal.csproj.CoreCompileInputs.cache
+C:\Users\Sergey\Desktop\Северсталь\Severstal\obj\Debug\Severstal.exe
+C:\Users\Sergey\Desktop\Северсталь\Severstal\obj\Debug\Severstal.pdb
