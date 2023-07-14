@@ -132,6 +132,22 @@ namespace Severstal
                 dataGridView1.Rows.RemoveAt(index);
                 listOrder.RemoveAt(index);
             }
+            if(dataGridView1.Rows.Count < 1)
+            {
+                sendToDB.Enabled = false;
+            }
+        }
+
+        private void dateFrom_ValueChanged(object sender, EventArgs e)
+        {
+            if (dateFrom.Value > dateTo.Value)
+                dateTo.Value = dateFrom.Value;
+        }
+
+        private void dateTo_ValueChanged(object sender, EventArgs e)
+        {
+            if (dateTo.Value < dateFrom.Value)
+                dateTo.Value = dateFrom.Value;
         }
     }
 }
