@@ -27,6 +27,7 @@ namespace Severstal
 
                     contragentCB.ValueMember = "name";
                     contragentCB.DisplayMember = "name";
+                    startLoadBtn.Enabled = true;
                 }
             }, TaskScheduler.FromCurrentSynchronizationContext());
         }
@@ -49,7 +50,6 @@ namespace Severstal
         {
             contragentCB.Enabled = false;
             startLoadBtn.Enabled = false;
-            addBtn.Enabled = true;
             productCB.Enabled = true;
             numberOf.Enabled = true;
             Price.Enabled = true;
@@ -67,6 +67,7 @@ namespace Severstal
                     productCB.DataSource = task.Result;
                     productCB.ValueMember = "name";
                     productCB.DisplayMember = "name";
+                    addBtn.Enabled = true;
                 }
             }, TaskScheduler.FromCurrentSynchronizationContext());
 
@@ -127,7 +128,6 @@ namespace Severstal
         {
             for(int i = dataGridView1.SelectedRows.Count - 1; i >= 0; i--)
             {
-                //MessageBox.Show(dataGridView1.SelectedRows[i].Index.ToString());
                 int index = dataGridView1.SelectedRows[i].Index;
                 dataGridView1.Rows.RemoveAt(index);
                 listOrder.RemoveAt(index);

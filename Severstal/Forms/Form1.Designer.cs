@@ -55,12 +55,21 @@ namespace Severstal
             this.numOf = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.priceForKG = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TotalPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.удалитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.sendToDB = new System.Windows.Forms.Button();
             this.cancelBtn = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.удалитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.dateFrom = new System.Windows.Forms.DateTimePicker();
+            this.label6 = new System.Windows.Forms.Label();
+            this.dateTo = new System.Windows.Forms.DateTimePicker();
+            this.searchBtn = new System.Windows.Forms.Button();
+            this.printBtn = new System.Windows.Forms.Button();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -72,8 +81,12 @@ namespace Severstal
             ((System.ComponentModel.ISupportInitialize)(this.Price)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numberOf)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.tableLayoutPanel7.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
+            this.tableLayoutPanel7.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.tableLayoutPanel8.SuspendLayout();
+            this.tableLayoutPanel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -175,6 +188,7 @@ namespace Severstal
             this.startLoadBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.startLoadBtn.AutoSize = true;
+            this.startLoadBtn.Enabled = false;
             this.startLoadBtn.Location = new System.Drawing.Point(10, 34);
             this.startLoadBtn.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
             this.startLoadBtn.Name = "startLoadBtn";
@@ -361,14 +375,6 @@ namespace Severstal
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.product,
@@ -376,14 +382,6 @@ namespace Severstal
             this.priceForKG,
             this.TotalPrice});
             this.dataGridView1.ContextMenuStrip = this.contextMenuStrip1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 139);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(0);
@@ -426,6 +424,21 @@ namespace Severstal
             this.TotalPrice.MinimumWidth = 6;
             this.TotalPrice.Name = "TotalPrice";
             this.TotalPrice.ReadOnly = true;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.удалитьToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(135, 28);
+            // 
+            // удалитьToolStripMenuItem
+            // 
+            this.удалитьToolStripMenuItem.Name = "удалитьToolStripMenuItem";
+            this.удалитьToolStripMenuItem.Size = new System.Drawing.Size(134, 24);
+            this.удалитьToolStripMenuItem.Text = "Удалить";
+            this.удалитьToolStripMenuItem.Click += new System.EventHandler(this.удалитьToolStripMenuItem_Click);
             // 
             // tableLayoutPanel7
             // 
@@ -472,28 +485,158 @@ namespace Severstal
             // 
             // tabPage2
             // 
+            this.tabPage2.BackColor = System.Drawing.Color.LightCyan;
+            this.tabPage2.Controls.Add(this.tableLayoutPanel8);
             this.tabPage2.Location = new System.Drawing.Point(4, 34);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(996, 515);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Печать";
-            this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // contextMenuStrip1
+            // tableLayoutPanel8
             // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.удалитьToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(135, 28);
+            this.tableLayoutPanel8.ColumnCount = 2;
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 253F));
+            this.tableLayoutPanel8.Controls.Add(this.tableLayoutPanel9, 1, 0);
+            this.tableLayoutPanel8.Controls.Add(this.dataGridView2, 0, 0);
+            this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel8.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel8.Name = "tableLayoutPanel8";
+            this.tableLayoutPanel8.RowCount = 1;
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(990, 509);
+            this.tableLayoutPanel8.TabIndex = 0;
             // 
-            // удалитьToolStripMenuItem
+            // tableLayoutPanel9
             // 
-            this.удалитьToolStripMenuItem.Name = "удалитьToolStripMenuItem";
-            this.удалитьToolStripMenuItem.Size = new System.Drawing.Size(134, 24);
-            this.удалитьToolStripMenuItem.Text = "Удалить";
-            this.удалитьToolStripMenuItem.Click += new System.EventHandler(this.удалитьToolStripMenuItem_Click);
+            this.tableLayoutPanel9.ColumnCount = 1;
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel9.Controls.Add(this.printBtn, 0, 5);
+            this.tableLayoutPanel9.Controls.Add(this.dateTo, 0, 3);
+            this.tableLayoutPanel9.Controls.Add(this.label6, 0, 2);
+            this.tableLayoutPanel9.Controls.Add(this.label5, 0, 0);
+            this.tableLayoutPanel9.Controls.Add(this.dateFrom, 0, 1);
+            this.tableLayoutPanel9.Controls.Add(this.searchBtn, 0, 4);
+            this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel9.Location = new System.Drawing.Point(737, 0);
+            this.tableLayoutPanel9.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel9.Name = "tableLayoutPanel9";
+            this.tableLayoutPanel9.RowCount = 7;
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(253, 509);
+            this.tableLayoutPanel9.TabIndex = 0;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(3, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(247, 25);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "От:";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // dateFrom
+            // 
+            this.dateFrom.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dateFrom.Location = new System.Drawing.Point(10, 35);
+            this.dateFrom.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
+            this.dateFrom.Name = "dateFrom";
+            this.dateFrom.Size = new System.Drawing.Size(233, 30);
+            this.dateFrom.TabIndex = 1;
+            // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(3, 72);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(247, 25);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "До:";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // dateTo
+            // 
+            this.dateTo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dateTo.Location = new System.Drawing.Point(10, 107);
+            this.dateTo.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
+            this.dateTo.Name = "dateTo";
+            this.dateTo.Size = new System.Drawing.Size(233, 30);
+            this.dateTo.TabIndex = 3;
+            // 
+            // searchBtn
+            // 
+            this.searchBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.searchBtn.AutoSize = true;
+            this.searchBtn.Location = new System.Drawing.Point(10, 147);
+            this.searchBtn.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
+            this.searchBtn.Name = "searchBtn";
+            this.searchBtn.Size = new System.Drawing.Size(233, 34);
+            this.searchBtn.TabIndex = 4;
+            this.searchBtn.Text = "Поиск";
+            this.searchBtn.UseVisualStyleBackColor = true;
+            // 
+            // printBtn
+            // 
+            this.printBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.printBtn.AutoSize = true;
+            this.printBtn.Location = new System.Drawing.Point(10, 187);
+            this.printBtn.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
+            this.printBtn.Name = "printBtn";
+            this.printBtn.Size = new System.Drawing.Size(233, 34);
+            this.printBtn.TabIndex = 5;
+            this.printBtn.Text = "Печать";
+            this.printBtn.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView2.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(0);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.RowHeadersVisible = false;
+            this.dataGridView2.RowHeadersWidth = 51;
+            this.dataGridView2.RowTemplate.Height = 24;
+            this.dataGridView2.Size = new System.Drawing.Size(737, 509);
+            this.dataGridView2.TabIndex = 1;
             // 
             // Form1
             // 
@@ -519,9 +662,14 @@ namespace Severstal
             ((System.ComponentModel.ISupportInitialize)(this.Price)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numberOf)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel7.PerformLayout();
-            this.contextMenuStrip1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            this.tableLayoutPanel8.ResumeLayout(false);
+            this.tableLayoutPanel9.ResumeLayout(false);
+            this.tableLayoutPanel9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -557,6 +705,15 @@ namespace Severstal
         private System.Windows.Forms.Button cancelBtn;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem удалитьToolStripMenuItem;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
+        private System.Windows.Forms.Button printBtn;
+        private System.Windows.Forms.DateTimePicker dateTo;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DateTimePicker dateFrom;
+        private System.Windows.Forms.Button searchBtn;
+        private System.Windows.Forms.DataGridView dataGridView2;
     }
 }
 
