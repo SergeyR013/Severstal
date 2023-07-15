@@ -14,6 +14,7 @@ namespace Severstal.Models
         decimal numOf = 0;
         decimal price = 0;
         decimal TotalPrice;
+        string date;
 
         public void setProduct(string _product)
         {
@@ -54,6 +55,14 @@ namespace Severstal.Models
         public decimal getTotalPrice()
         {
             return TotalPrice;
+        }
+        public void setDate(String _date)
+        {
+            date = _date;
+        }
+        public String getDate()
+        {
+            return date;
         }
         public void print()
         {

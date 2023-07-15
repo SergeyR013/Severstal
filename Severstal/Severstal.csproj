@@ -89,6 +89,7 @@
     <Compile Include="DataBase\GetProducts.cs" />
     <Compile Include="DataBase\InsertOrders.cs" />
     <Compile Include="DataBase\LoadContragents.cs" />
+    <Compile Include="DataBase\SearchOrders.cs" />
     <Compile Include="ErrorHandler\Error.cs" />
     <Compile Include="Forms\Form1.cs">
       <SubType>Form</SubType>
